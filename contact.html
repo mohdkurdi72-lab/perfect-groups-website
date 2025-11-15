@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Brands – Perfect Solutions</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #f7f8fb;
+        }
+
+        header {
+            background: #0a2342;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 55px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 35px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .page-header h1 {
+            font-size: 32px;
+            color: #0a2342;
+            margin-bottom: 10px;
+        }
+
+        /* Brands layout */
+        .brands-container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 20px;
+            padding: 20px 50px;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            color: #0a2342;
+        }
+
+        .sidebar button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+            background: #e8ecf2;
+            color: #0a2342;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .sidebar button:hover {
+            background: #dce2eb;
+        }
+
+        .brand-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .brand-content h2 {
+            color: #0a2342;
+        }
+
+        .brand-grid {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+
+        .brand-item {
+            background: #f7f7f7;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .brand-item img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="perfect-solutions-logo.png" class="logo" alt="Perfect Solutions Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="brands.html" class="active">Brands</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Our Partner Brands</h1>
+    <p>Foodservice • Packaging • Retail Solutions</p>
+</section>
+
+<div class="brands-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Brands</h3>
+        <button onclick="showHotpack()">Hotpack</button>
+        <button onclick="showSafco()">Safco</button>
+        <button onclick="showComing()">More Coming</button>
+    </div>
+
+    <!-- Brand Content -->
+    <div class="brand-content" id="brand-box">
+        <h2>Select a brand from the left menu</h2>
+        <p>Click any brand to display products.</p>
+    </div>
+</div>
+
+<script>
+function showHotpack() {
+    document.getElementById("brand-box").innerHTML = `
+        <h2>Hotpack</h2>
+        <p>Leading global manufacturer of food packaging solutions.</p>
+
+        <div class="brand-grid">
+            <div class="brand-item">
+                <img src="https://i.imgur.com/ZB3m5Tq.jpg">
+                <p>Containers</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://i.imgur.com/Xephm0W.jpg">
+                <p>Hot Cups</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://i.imgur.com/L6Nw4fe.jpg">
+                <p>Takeaway Packaging</p>
+            </div>
+        </div>
+    `;
+}
+
+function showSafco() {
+    document.getElementById("brand-box").innerHTML = `
+        <h2>Safco</h2>
+        <p>Quality disposables for restaurants, cafés and supermarkets.</p>
+
+        <div class="brand-grid">
+            <div class="brand-item">
+                <img src="https://i.imgur.com/u0TExxP.jpg">
+                <p>Plastic Trays</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://i.imgur.com/L9oOKy8.jpg">
+                <p>Foam Products</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://i.imgur.com/2pPEVxo.jpg">
+                <p>Food Packaging</p>
+            </div>
+        </div>
+    `;
+}
+
+function showComing() {
+    document.getElementById("brand-box").innerHTML = `
+        <h2>More brands coming soon</h2>
+        <p>We are expanding partnerships with major packaging manufacturers.</p>
+    `;
+}
+</script>
+
+</body>
+</html>
