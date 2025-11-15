@@ -4,41 +4,154 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfect Solutions – Packaging & Foodservice</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #1a1a1a;
+        }
+
+        /* NAVBAR */
+        header {
+            background-color: #0a2342;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 55px;
+        }
+
+        nav a {
+            margin-left: 35px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* SLIDER */
+        .slider {
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            width: 300%;
+            height: 100%;
+            display: flex;
+            animation: slide 12s infinite;
+        }
+
+        .slides img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: -100%; }
+            66% { margin-left: -200%; }
+            100% { margin-left: 0; }
+        }
+
+        /* HERO TEXT */
+        .hero-text {
+            padding: 60px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 40px;
+            color: #0a2342;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+            color: #444;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 30px;
+            background-color: #0a2342;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background-color: #14375b;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0a2342;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<!-- Header -->
-<header>
-    <img src="perfect-solutions-logo.png" class="logo" alt="Perfect Solutions Logo">
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="brands.html">Brands</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <!-- NAVBAR -->
+    <header>
+        <img src="perfect-solutions-logo.png" alt="Perfect Solutions Logo">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="brands.html">Brands</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<!-- Slider -->
-<section class="slider">
-    <div class="slides">
-        <img src="https://i.imgur.com/iEGkGqI.jpg" />
-        <img src="https://i.imgur.com/Pu0pCLd.jpg" />
-        <img src="https://i.imgur.com/1pFQYTt.jpg" />
+    <!-- SLIDER -->
+    <section class="slider">
+        <div class="slides">
+            <img src="https://i.imgur.com/L6Nw4fe.jpg" />
+            <img src="https://i.imgur.com/2pPEVxo.jpg" />
+            <img src="https://i.imgur.com/1YxJjVc.jpg" />
+        </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <div class="hero-text">
+        <h1>Perfect Solutions – Dallas, USA</h1>
+        <p>
+            We provide high-quality packaging & foodservice supplies for supermarkets, restaurants, cafés, 
+            catering companies and retail stores across the United States.
+        </p>
+        <a class="btn" href="brands.html">View Our Brands</a>
     </div>
-</section>
 
-<!-- Main Content -->
-<section class="hero">
-    <h1>Perfect Solutions for supermarkets, restaurants & cafés</h1>
-    <p>
-        We provide packaging & foodservice supplies across the United States.
-        Partner brands include Hotpack, Safco and more.
-    </p>
-    <a class="btn" href="brands.html">View Brands</a>
-</section>
+    <!-- FOOTER -->
+    <footer>
+        Perfect Solutions – Dallas, USA • Packaging & Foodservice Supplies  
+        <br>© 2025 All Rights Reserved
+    </footer>
 
 </body>
-<script src="script.js"></script>
 </html>
